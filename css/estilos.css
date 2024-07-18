@@ -1,0 +1,99 @@
+/* styles.css */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.titulos{
+    text-align: center;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    
+}
+.modo-disco {
+
+    background-color: #000 ;
+    animation: disco 1s infinite ;
+}
+
+@keyframes disco {
+    0% { background-color: #FF5733; }
+    20% { background-color: #33FF57; }
+    40% { background-color: #3357FF; }
+    60% { background-color: #FF33A1; }
+    80% { background-color: #33FFF3; }
+    100% { background-color: #F3FF33; }
+}
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+}
+
+footer {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.product-item {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 10px;
+    text-align: center;
+    flex: 1 1 calc(33.333% - 20px);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.product-item img {
+    max-width: 100%;
+    height: auto;
+}
+
+.product-item h2 {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.product-item p {
+    color: #555;
+}
+
+.product-item .price {
+    font-size: 1.5em;
+    color: #4CAF50;
+}
+
+@media (max-width: 768px) {
+    .product-item {
+        flex: 1 1 calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .product-item {
+        flex: 1 1 100%;
+    }
+}
