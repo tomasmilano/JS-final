@@ -14,9 +14,9 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function agregarImagen() {
-      if (!imageContainer.querySelector('img')) { // Verifica si la imagen ya está agregada
+      if (!imageContainer.querySelector('img')) { 
           const img = document.createElement('img');
-          img.src = 'images/fort.jpeg'; // URL de la imagen
+          img.src = ''; 
           img.alt = 'Imagen de prueba';
           img.classList.add('img-fluid');
           imageContainer.appendChild(img);
